@@ -8,6 +8,18 @@
     tools:context=".on2_driver">
 
     <ImageView
+        android:id="@+id/back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/bus"
+        android:src="@drawable/vector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
         android:id="@+id/phonedriv"
         android:layout_width="172dp"
         android:layout_height="140dp"
@@ -19,8 +31,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/bus"/>
-
-
 
     <TextView
         android:id="@+id/communiquez"
