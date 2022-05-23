@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".on2_driver">
+
+    <ImageView
+        android:id="@+id/phonedriv"
+        android:layout_width="172dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/driver_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/bus"/>
+
+
+
+    <TextView
+        android:id="@+id/communiquez"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/communiquez"
+        android:textAppearance="@style/communiquez"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonedriv" />
+
+    <TextView
+        android:id="@+id/ignorer"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="top"
+        android:text="@string/ignorer"
+        android:textAppearance="@style/ignorer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communiquez" />
+
+    <Button
+        android:id="@+id/inactive"
+        android:layout_width="10dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/dot"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communiquez"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/active"
+        android:layout_width="20dp"
+        android:layout_height="5dp"
+        android:layout_marginEnd="310dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/communiquez"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

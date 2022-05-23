@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".on1_employee">
+
+    <ImageView
+        android:id="@+id/busemp"
+        android:layout_width="195dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/employe_bus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/bus"/>
+
+    <ImageView
+        android:id="@+id/trafcemp"
+        android:layout_width="210dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/traffic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/traffic"/>
+
+    <TextView
+        android:id="@+id/asseyez_vou"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/asseyez_vou"
+        android:textAppearance="@style/asseyez_vou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busemp" />
+
+    <TextView
+        android:id="@+id/ignorer"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="top"
+        android:text="@string/ignorer"
+        android:textAppearance="@style/ignorer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asseyez_vou" />
+
+    <Button
+        android:id="@+id/active"
+        android:layout_width="20dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/dot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asseyez_vou"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/inactive"
+        android:layout_width="10dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="310dp"
+        android:background="@drawable/dot"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asseyez_vou"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
