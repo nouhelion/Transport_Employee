@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/beclipse.xml" value="0.2305" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/button.xml" value="0.2305" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/dot.xml" value="0.2305" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/eclipse.xml" value="0.2305" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/input.xml" value="0.2305" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/drawable/line.xml" value="0.2305" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
       </map>
     </option>

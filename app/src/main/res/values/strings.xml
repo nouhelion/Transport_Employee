@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">TEmplo</string>
+    <string name="driver">driver</string>
+    <string name="employee">employee</string>
+    <string name="client">client</string>
+    <string name="asseyez_vou">Asseyez-vous et profitez de votre voyage dans un trajet sûr et fiable vers votre lieu de travail</string>
+    <string name="bus">bus</string>
+    <string name="traffic">traffic</string>
+    <string name="ignorer">Ignorer</string>
+    <string name="visualisez_">Visualisez les informations concernant votre transport et sa localisation</string>
+    <string name="mot_">Mot de Passe oublié ?</string>
+    <string name="continuer">Continuer</string>
+    <string name="nom_d_utili">Nom d\'utilisateur...</string>
+    <string name="mot_de_pass">Mot de Passe...</string>
+    <string name="powered_by">Powered By</string>
+    <string name="local">local</string>
+    <string name="v_rifier_le">Vérifier les différentes stations par lesquelles vous devez passer</string>
+    <string name="communiquez">Communiquez vos retards avec vos passagers</string>
+    <string name="menu">menu</string>
+    <string name="historique_">Historique</string>
+    <string name="trajet_en_c">Trajet En cours</string>
 </resources>
