@@ -3,7 +3,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".trajet_det_employee">
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/menu"
+        android:src="@drawable/menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
+
+
+    <TextView
+        android:id="@+id/trajet_en_c"
+        android:layout_width="120dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:text="@string/trajet_en_c"
+        android:gravity="center"
+        android:textAppearance="@style/trajet_en_c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/bar"
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trajet_en_c"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pickup"
+        android:background="@drawable/backgr"
+        app:layout_constraintTop_toBottomOf="@+id/trajet_en_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_width="320dp"
+        android:layout_height="220dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/retard"
+        android:background="@drawable/backgr"
+        app:layout_constraintTop_toBottomOf="@+id/pickup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_width="320dp"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/rret"
+            android:text="@string/retard_du_t"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textAppearance="@style/retard_du_t"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="120dp"
+            android:layout_height="18dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/loc"
+        android:layout_width="71dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/local" />
+
+    <TextView
+        android:id="@+id/pow"
+        android:text="@string/powered_by"
+        android:textAppearance="@style/powered_by"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="18dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,7 +55,10 @@
     <style name="station_de_">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">#A7ACAC</item>
-
+    </style>
+    <style name="retard_du_t">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#5B5E5D</item>
     </style>
 
 
