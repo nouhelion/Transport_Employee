@@ -27,6 +27,8 @@
     <string name="r_clamation">Réclamations</string>
     <string name="information">Informations</string>
     <string name="acceuil">Acceuil</string>
+    <string name="modifier_pr">Modifier Profil</string>
+
 
 
 </resources>
