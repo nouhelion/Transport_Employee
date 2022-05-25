@@ -19,4 +19,8 @@
     <string name="menu">menu</string>
     <string name="historique_">Historique</string>
     <string name="trajet_en_c">Trajet En cours</string>
+    <string name="modificatio">Modification de la station</string>
+    <string name="station_de_">Station de départ...</string>
+
+
 </resources>
