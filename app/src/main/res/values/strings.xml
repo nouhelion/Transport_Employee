@@ -22,7 +22,7 @@
     <string name="modificatio">Modification de la station</string>
     <string name="station_de_">Station de départ...</string>
     <string name="retard_du_t">Retard du trajet</string>
-
+    <string name="welcome">Welcome</string>
 
 
 </resources>
