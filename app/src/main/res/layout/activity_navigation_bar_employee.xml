@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/bar"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:contentDescription="@string/employee">
@@ -64,6 +64,143 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logout_const"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/acc_const"
+        app:layout_constraintTop_toBottomOf="@+id/employeimg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/acc"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/acceuil"
+        android:text="@string/acceuil"
+        app:layout_constraintTop_toBottomOf="@+id/employeimg"
+        android:layout_marginTop="70dp"
+        android:textAppearance="@style/acceuil"
+        android:layout_marginEnd="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="32dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info_const"
+        app:layout_constraintTop_toBottomOf="@+id/acc_const"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/inf"
+        android:text="@string/information"
+        app:layout_constraintTop_toBottomOf="@+id/acceuil"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/information"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="32dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recla_const"
+        app:layout_constraintTop_toBottomOf="@+id/info_const"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/recla"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/sad"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/reclamations"
+        android:text="@string/r_clamation"
+        app:layout_constraintTop_toBottomOf="@+id/inf"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/r_clamation"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="110dp"
+        android:layout_height="32dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rate_const"
+        app:layout_constraintTop_toBottomOf="@+id/recla_const"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/rate"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/star_half_empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/rateus"
+        android:text="@string/rate_us"
+        app:layout_constraintTop_toBottomOf="@+id/reclamations"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/rate_us"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="110dp"
+        android:layout_height="32dp"/>
 
     <ImageView
         android:id="@+id/loc"

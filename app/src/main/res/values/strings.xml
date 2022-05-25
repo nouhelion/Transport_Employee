@@ -23,6 +23,10 @@
     <string name="station_de_">Station de départ...</string>
     <string name="retard_du_t">Retard du trajet</string>
     <string name="welcome">Welcome</string>
+    <string name="rate_us">Rate us</string>
+    <string name="r_clamation">Réclamations</string>
+    <string name="information">Informations</string>
+    <string name="acceuil">Acceuil</string>
 
 
 </resources>
