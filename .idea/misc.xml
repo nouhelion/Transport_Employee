@@ -14,6 +14,7 @@
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_connect_driver.xml" value="0.221875" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_connect_employee.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_historique_employee.xml" value="0.2359375" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_informations_driver.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_informations_employee.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_navigation_bar_employee.xml" value="0.2359375" />
@@ -21,9 +22,12 @@
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_on1_employee.xml" value="0.221875" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_on2_driver.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_on2_employee.xml" value="0.2359375" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_rate_us_employee.xml" value="0.2359375" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_reclamations_employee.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_tencours_employee.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_trajet_det_driver.xml" value="0.2359375" />
         <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_trajet_det_employee.xml" value="0.2359375" />
+        <entry key="..\:/PFA/Transport_Employee/app/src/main/res/layout/activity_trajet_ncours_driver.xml" value="0.2359375" />
       </map>
     </option>
   </component>

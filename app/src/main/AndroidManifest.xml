@@ -29,7 +29,7 @@
             android:name=".trajet_det_driver"
             android:exported="false" />
         <activity
-            android:name=".trajet_ncours_driver"
+            android:name=".tencours_driver"
             android:exported="false" />
         <activity
             android:name=".rate_us_employee"

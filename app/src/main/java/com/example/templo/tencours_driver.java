@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class trajet_ncours_driver extends AppCompatActivity {
+public class tencours_driver extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trajet_ncours_driver);
+        setContentView(R.layout.activity_tencours_driver);
     }
 }
