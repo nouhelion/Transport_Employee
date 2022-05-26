@@ -4,6 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".navigation_bar_driver">
+
+    <TextView
+        android:id="@+id/welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/welcome"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/welcome"
+        android:layout_width="80dp"
+        android:layout_height="30dp"/>
+
+
+    <ImageView
+        android:id="@+id/employeimg"
+        android:src="@drawable/driver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/employee">
+    </ImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logout_const"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/bar"
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout_const"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/acc_const"
+        app:layout_constraintTop_toBottomOf="@+id/employeimg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/acc"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/acceuil"
+        android:text="@string/acceuil"
+        app:layout_constraintTop_toBottomOf="@+id/employeimg"
+        android:layout_marginTop="70dp"
+        android:textAppearance="@style/acceuil"
+        android:layout_marginEnd="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="32dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/info_const"
+        app:layout_constraintTop_toBottomOf="@+id/acc_const"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/circle"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/retard_du_t"
+            android:src="@drawable/person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/inf"
+        android:text="@string/information"
+        app:layout_constraintTop_toBottomOf="@+id/acceuil"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/information"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="32dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
