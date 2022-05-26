@@ -55,6 +55,11 @@
         tools:ignore="TextContrastCheck" />
 
 
+    <Spinner
+        android:id="@+id/stations_spinner"
+        android:layout_width="120dp"
+        android:layout_height="35dp" />
+
     <Button
         android:id="@+id/emp1"
         android:background="@drawable/jixo"
