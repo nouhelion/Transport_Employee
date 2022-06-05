@@ -67,6 +67,8 @@ public class informations_employee extends AppCompatActivity implements View.OnC
         editTelephone.setText(employe.getTelephone());
         editDatenaissance.setText(employe.getDatenaissance());
 
+
+
         // creating variable for button
         findViewById(R.id.cont).setOnClickListener(this);
 
