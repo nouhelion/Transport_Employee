@@ -34,7 +34,7 @@
 
     <EditText
         android:id="@+id/in1"
-        android:layout_width="218dp"
+        android:layout_width="268dp"
         android:layout_height="34dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/input"
@@ -50,7 +50,7 @@
 
     <EditText
         android:id="@+id/in2"
-        android:layout_width="218dp"
+        android:layout_width="268dp"
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"

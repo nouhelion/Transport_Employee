@@ -31,8 +31,11 @@
     <string name="valuation_d">Évaluation du service</string>
     <string name="liste_des_s">Liste des stations</string>
     <string name="ajouter_un_">Ajouter un retard du trajet</string>
-
     <string name="liste_des_e">Liste des employés</string>
-
-
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="cin">CIN</string>
+    <string name="Adresse">Adresse</string>
+    <string name="datnaissance">Date de Naissance</string>
+    <string name="telephone">Téléphone</string>
 </resources>
