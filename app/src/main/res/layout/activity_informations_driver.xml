@@ -26,14 +26,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/prenom"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bar"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/nom"
@@ -41,14 +42,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/nom"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prenom"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/cin"
@@ -56,14 +58,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/cin"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nom"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/datenaissance"
@@ -71,14 +74,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/datnaissance"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cin"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/adresse"
@@ -86,14 +90,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/Adresse"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datenaissance"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/telephone"
@@ -101,14 +106,15 @@
         android:layout_height="34dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:hint="@string/telephone"
+        android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adresse"
-        tools:ignore="TextContrastCheck,TextFields,TouchTargetSizeCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck,TextFields,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/cont"
@@ -116,6 +122,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="440dp"
         android:background="@drawable/button"
+        android:fontFamily="@font/poppins"
         android:text="@string/modifier_pr"
         android:textAppearance="@style/continuer"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,6 +136,7 @@
         android:layout_height="18dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="@string/information"
         android:textAppearance="@style/trajet_en_c"
         app:layout_constraintStart_toStartOf="parent"

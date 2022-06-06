@@ -20,15 +20,15 @@
         tools:ignore="ImageContrastCheck" />
 
 
-
     <TextView
         android:id="@+id/trajet_en_c"
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="18dp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
-        android:text="@string/trajet_en_c"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
         android:gravity="center"
+        android:text="@string/trajet_en_c"
         android:textAppearance="@style/trajet_en_c"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu"
@@ -69,14 +69,15 @@
 
         <TextView
             android:id="@+id/rret"
-            android:text="@string/retard_du_t"
-            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:layout_height="18dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/retard_du_t"
             android:textAppearance="@style/retard_du_t"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="120dp"
-            android:layout_height="18dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -94,14 +95,15 @@
 
     <TextView
         android:id="@+id/pow"
+        android:layout_width="100dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins"
         android:text="@string/powered_by"
         android:textAppearance="@style/powered_by"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="100dp"
-        android:layout_height="18dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

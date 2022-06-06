@@ -33,12 +33,12 @@
         android:contentDescription="@string/bus"/>
 
 
-
     <TextView
         android:id="@+id/visualisez_"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
         android:layout_marginTop="70dp"
+        android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:text="@string/visualisez_"
         android:textAppearance="@style/visualisez_"
@@ -52,6 +52,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins_semibold"
         android:gravity="top"
         android:text="@string/ignorer"
         android:textAppearance="@style/ignorer"
