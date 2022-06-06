@@ -19,6 +19,97 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck" />
 
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/prenom"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/nom"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prenom"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/cin"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/cin"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nom"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/datenaissance"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/datnaissance"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cin"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/adresse"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/Adresse"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datenaissance"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/telephone"
+        android:layout_width="268dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/telephone"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adresse"
+        tools:ignore="TextContrastCheck,TextFields,TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
+
     <Button
         android:id="@+id/cont"
         android:layout_width="120dp"

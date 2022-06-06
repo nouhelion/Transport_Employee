@@ -2,7 +2,8 @@ package com.example.templo;
 
 import java.io.Serializable;
 
-public class Employe implements Serializable {
+public class conducteur implements Serializable {
+
     private String nom;
     private String prenom;
     private String cin;
@@ -11,18 +12,7 @@ public class Employe implements Serializable {
     private String telephone;
     private String station;
 
-    public String getStation() {
-        return station;
-    }
-
-    public void setStation(String station) {
-        this.station = station;
-    }
-
-    public Employe() {
-    }
-
-    public Employe(String nom, String prenom, String cin, String adresse, String datenaissance, String telephone) {
+    public conducteur(String nom, String prenom, String cin, String adresse, String datenaissance, String telephone) {
         this.nom = nom;
         this.prenom = prenom;
         this.cin = cin;
@@ -31,7 +21,10 @@ public class Employe implements Serializable {
         this.telephone = telephone;
     }
 
-    public  String getNom() {
+    public conducteur() {
+    }
+
+    public String getNom() {
         return nom;
     }
 
@@ -39,7 +32,7 @@ public class Employe implements Serializable {
         this.nom = nom;
     }
 
-    public  String getPrenom() {
+    public String getPrenom() {
         return prenom;
     }
 
@@ -47,7 +40,7 @@ public class Employe implements Serializable {
         this.prenom = prenom;
     }
 
-    public  String getCin() {
+    public String getCin() {
         return cin;
     }
 
@@ -55,7 +48,7 @@ public class Employe implements Serializable {
         this.cin = cin;
     }
 
-    public  String getAdresse() {
+    public String getAdresse() {
         return adresse;
     }
 
@@ -71,11 +64,19 @@ public class Employe implements Serializable {
         this.datenaissance = datenaissance;
     }
 
-    public  String getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public String getStation() {
+        return station;
+    }
+
+    public void setStation(String station) {
+        this.station = station;
     }
 }

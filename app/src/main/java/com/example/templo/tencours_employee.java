@@ -23,7 +23,7 @@ public class tencours_employee extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        history=(TextView) findViewById(R.id.historique_);
+        history=(TextView) findViewById(R.id.liste_des_s);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

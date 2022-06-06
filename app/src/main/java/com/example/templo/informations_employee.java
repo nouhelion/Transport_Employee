@@ -43,6 +43,9 @@ public class informations_employee extends AppCompatActivity {
     //button
     Button modify;
 
+    //imageview
+    ImageView menu;
+
     // creating a variable for firebasefirestore.
     private FirebaseUser user;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
@@ -52,6 +55,16 @@ public class informations_employee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informations_employee);
+
+
+        menu=(ImageView) findViewById(R.id.menu);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(informations_employee.this,navigation_bar_employee.class);
+                startActivity(intent);
+            }
+        });
 
 
         //employe = (Employe) getIntent().getSerializableExtra("Employe");
@@ -80,37 +93,37 @@ public class informations_employee extends AppCompatActivity {
 
     private boolean hasValidationErrors( String Nom, String Prenom, String Cin, String Adresse, String Datenaissance, String Telephone) {
         if (Nom.isEmpty()) {
-            editNom.setError("Name required");
+            editNom.setError("Remplissez votre nom");
             editNom.requestFocus();
             return true;
         }
 
         if (Prenom.isEmpty()) {
-            editPrenom.setError("Brand required");
+            editPrenom.setError("Remplissez votre prenom");
             editPrenom.requestFocus();
             return true;
         }
 
         if (Cin.isEmpty()) {
-            editCin.setError("Description required");
+            editCin.setError("Remplissez votre cin");
             editCin.requestFocus();
             return true;
         }
 
         if (Adresse.isEmpty()) {
-            editAdresse.setError("Price required");
+            editAdresse.setError("Remplissez votre adresse");
             editAdresse.requestFocus();
             return true;
         }
 
         if (Datenaissance.isEmpty()) {
-            editDatenaissance.setError("Quantity required");
+            editDatenaissance.setError("Remplissez votre date de naissance");
             editDatenaissance.requestFocus();
             return true;
         }
 
         if (Telephone.isEmpty()) {
-            editTelephone.setError("Quantity required");
+            editTelephone.setError("Remplissez votre telephone");
             editTelephone.requestFocus();
             return true;
         }
@@ -126,15 +139,14 @@ public class informations_employee extends AppCompatActivity {
         Telephone=editTelephone.getText().toString();
         Datenaissance=editDatenaissance.getText().toString();
         if (!hasValidationErrors(Nom,Prenom,Cin,Adresse,Datenaissance,Telephone)) {
-            Employe e = new Employe(Nom, Prenom, Cin, Adresse, Datenaissance, Telephone);
             db.collection("Employe")
                     .document(user.getUid())
-                    .update("nom",e.getNom(),
-                            "prenom",e.getPrenom(),
-                            "cin",e.getCin(),
-                            "adresse",e.getAdresse(),
-                            "telephone",e.getTelephone(),
-                            "datenaissance",e.getDatenaissance()
+                    .update("nom",Nom,
+                            "prenom",Prenom,
+                            "cin",Cin,
+                            "adresse",Adresse,
+                            "telephone",Telephone,
+                            "datenaissance",Datenaissance
                     )
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
