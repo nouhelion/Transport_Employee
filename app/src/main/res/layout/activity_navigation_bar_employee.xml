@@ -19,6 +19,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/nam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/sara"
+        android:textAppearance="@style/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/welcome"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/employeimg"
