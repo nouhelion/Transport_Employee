@@ -3,7 +3,6 @@ package com.example.templo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.templo.Employe;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,19 +12,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class informations_employee extends AppCompatActivity implements View.OnClickListener {
+public class informations_employee extends AppCompatActivity {
 
     // creating variables for our edit text
     private EditText editNom,editPrenom,editCin,editAdresse,editTelephone,editDatenaissance;
@@ -39,18 +41,14 @@ public class informations_employee extends AppCompatActivity implements View.OnC
     Button modify;
 
     // creating a variable for firebasefirestore.
-    private FirebaseFirestore db;
     private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informations_employee);
-        employe =new Employe();
-        employe = (Employe) getIntent().getSerializableExtra("Employe");
 
-        // getting our instance from Firebase Firestore.
-        db = FirebaseFirestore.getInstance();
-        user = FirebaseAuth.getInstance().getCurrentUser();
+
+        employe = (Employe) getIntent().getSerializableExtra("Employe");
 
         // initializing our edittext and buttons
         editNom= findViewById(R.id.nom);
@@ -60,20 +58,23 @@ public class informations_employee extends AppCompatActivity implements View.OnC
         editTelephone = findViewById(R.id.telephone);
         editDatenaissance = findViewById(R.id.datenaissance);
 
-        editNom.setText(employe.getNom());
+
+
+
+            /*editNom.setText(employe.getNom());
         editPrenom.setText(employe.getPrenom());
         editCin.setText(employe.getCin());
         editAdresse.setText(employe.getAdresse());
         editTelephone.setText(employe.getTelephone());
-        editDatenaissance.setText(employe.getDatenaissance());
+        editDatenaissance.setText(employe.getDatenaissance());*/
 
 
 
         // creating variable for button
-        findViewById(R.id.cont).setOnClickListener(this);
+        //findViewById(R.id.cont).setOnClickListener(this);
 
     }
-
+/*
     private boolean hasValidationErrors( String Nom, String Prenom, String Cin, String Adresse, String Datenaissance, String Telephone) {
         if (Nom.isEmpty()) {
             editNom.setError("Name required");
@@ -115,14 +116,14 @@ public class informations_employee extends AppCompatActivity implements View.OnC
 
 
     private void updateDocument() {
-        Nom=editNom.getText().toString().trim();
-        Prenom=editPrenom.getText().toString().trim();
-        Cin=editCin.getText().toString().trim();
-        Adresse=editAdresse.getText().toString().trim();
-        Telephone=editTelephone.getText().toString().trim();
-        Datenaissance=editDatenaissance.getText().toString().trim();
+        Nom=editNom.getText().toString();
+        Prenom=editPrenom.getText().toString();
+        Cin=editCin.getText().toString();
+        Adresse=editAdresse.getText().toString();
+        Telephone=editTelephone.getText().toString();
+        Datenaissance=editDatenaissance.getText().toString();
         if (!hasValidationErrors(Nom,Prenom,Cin,Adresse,Datenaissance,Telephone)) {
-            Employe e = new Employe(Nom, Prenom, Cin, Adresse, Datenaissance, Telephone);
+            e = new Employe(Nom, Prenom, Cin, Adresse, Datenaissance, Telephone);
             db.collection("Employe")
                     .document(user.getUid())
                     .update("nom",e.getNom(),
@@ -139,15 +140,50 @@ public class informations_employee extends AppCompatActivity implements View.OnC
                         }
                     });
         }
+    }*/
+
+
+    ///dont touch it its working oooooooooof hmd hmd
+    @Override
+    public void onStart(){
+        super.onStart();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        String currentuid=user.getUid();
+        DocumentReference reference;
+        FirebaseFirestore firestore=FirebaseFirestore.getInstance();
+        reference=firestore.collection("Employe").document(currentuid);
+
+        reference.get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if(task.getResult().exists()){
+                            String Nom,Prenom,Cin,Adresse,Datenaissance,Telephone;
+                            Nom=task.getResult().getString("nom");
+                            Prenom=task.getResult().getString("prenom");
+                            Cin=task.getResult().getString("cin");
+                            Adresse=task.getResult().getString("adresse");
+                            Datenaissance=task.getResult().getString("datenaissance");
+                            Telephone=task.getResult().getString("telephone");
+
+                            editNom.setText(Nom);
+                            editPrenom.setText(Prenom);
+                            editCin.setText(Cin);
+                            editAdresse.setText(Adresse);
+                            editDatenaissance.setText(Datenaissance);
+                            editTelephone.setText(Telephone);
+                        }
+
+                    }
+                });
     }
 
-
-    @Override
+    /*@Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.cont:
                 updateDocument();
                 break;
         }
-    }
+    }*/
 }
