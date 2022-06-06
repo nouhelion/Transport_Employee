@@ -83,7 +83,7 @@ public class navigation_bar_employee extends AppCompatActivity {
                             Nom=task.getResult().getString("nom");
                             Prenom=task.getResult().getString("prenom");
 
-                            name.setText(Nom+" "+Prenom);
+                            name.setText(new StringBuilder().append(Nom).append(" ").append(Prenom).toString());
 
                         }
 
