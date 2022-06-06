@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,8 @@ import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Document;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -42,13 +45,16 @@ public class informations_employee extends AppCompatActivity {
 
     // creating a variable for firebasefirestore.
     private FirebaseUser user;
+    FirebaseFirestore db= FirebaseFirestore.getInstance();
+    DocumentReference documentReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informations_employee);
 
 
-        employe = (Employe) getIntent().getSerializableExtra("Employe");
+        //employe = (Employe) getIntent().getSerializableExtra("Employe");
 
         // initializing our edittext and buttons
         editNom= findViewById(R.id.nom);
@@ -60,21 +66,18 @@ public class informations_employee extends AppCompatActivity {
 
 
 
-
-            /*editNom.setText(employe.getNom());
-        editPrenom.setText(employe.getPrenom());
-        editCin.setText(employe.getCin());
-        editAdresse.setText(employe.getAdresse());
-        editTelephone.setText(employe.getTelephone());
-        editDatenaissance.setText(employe.getDatenaissance());*/
-
-
-
         // creating variable for button
         //findViewById(R.id.cont).setOnClickListener(this);
+       modify=(Button) findViewById(R.id.cont);
+        modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateDocument();
+            }
+        });
 
     }
-/*
+
     private boolean hasValidationErrors( String Nom, String Prenom, String Cin, String Adresse, String Datenaissance, String Telephone) {
         if (Nom.isEmpty()) {
             editNom.setError("Name required");
@@ -123,7 +126,7 @@ public class informations_employee extends AppCompatActivity {
         Telephone=editTelephone.getText().toString();
         Datenaissance=editDatenaissance.getText().toString();
         if (!hasValidationErrors(Nom,Prenom,Cin,Adresse,Datenaissance,Telephone)) {
-            e = new Employe(Nom, Prenom, Cin, Adresse, Datenaissance, Telephone);
+            Employe e = new Employe(Nom, Prenom, Cin, Adresse, Datenaissance, Telephone);
             db.collection("Employe")
                     .document(user.getUid())
                     .update("nom",e.getNom(),
@@ -140,7 +143,7 @@ public class informations_employee extends AppCompatActivity {
                         }
                     });
         }
-    }*/
+    }
 
 
     ///dont touch it its working oooooooooof hmd hmd
@@ -178,12 +181,5 @@ public class informations_employee extends AppCompatActivity {
                 });
     }
 
-    /*@Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.cont:
-                updateDocument();
-                break;
-        }
-    }*/
+
 }
