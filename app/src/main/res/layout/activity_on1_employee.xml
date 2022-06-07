@@ -49,7 +49,7 @@
         android:id="@+id/asseyez_vou"
         android:layout_width="280dp"
         android:layout_height="70dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:text="@string/asseyez_vou"

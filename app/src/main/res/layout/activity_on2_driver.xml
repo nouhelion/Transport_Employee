@@ -35,8 +35,8 @@
     <TextView
         android:id="@+id/communiquez"
         android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:text="@string/communiquez"

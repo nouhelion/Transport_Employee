@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/liste_des_s"
         android:layout_width="140dp"
-        android:layout_height="18dp"
+        android:layout_height="28dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
@@ -34,9 +34,9 @@
 
     <Button
         android:id="@+id/bar"
-        android:layout_width="150dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="170dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/line"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
     <TextView
         android:id="@+id/liste_des_e"
         android:layout_width="160dp"
-        android:layout_height="18dp"
+        android:layout_height="28dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/poppins_bold"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"
-        android:layout_width="120dp"
+        android:layout_width="180dp"
         android:layout_height="35dp" />
 
     <Button
@@ -72,9 +72,9 @@
         android:background="@drawable/jixo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stations_spinner"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -82,9 +82,9 @@
         android:background="@drawable/jixo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stations_spinner"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp2"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp2"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp3"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -127,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp4"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -138,7 +138,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp5"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -149,7 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp6"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -159,7 +159,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp7"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -170,7 +170,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp8"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -181,7 +181,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp9"
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emp10"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:layout_width="120dp"
+        android:layout_width="140dp"
         android:layout_height="35dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

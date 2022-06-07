@@ -39,4 +39,6 @@
     <string name="datnaissance">Date de Naissance</string>
     <string name="telephone">Téléphone</string>
     <string name="sara">Sara</string>
+    <string name="conducteur">Conducteur</string>
+    <string name="employ_">Employé</string>
 </resources>

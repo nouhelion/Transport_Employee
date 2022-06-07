@@ -37,7 +37,7 @@
         android:id="@+id/visualisez_"
         android:layout_width="300dp"
         android:layout_height="80dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:gravity="center_horizontal|top"
         android:text="@string/visualisez_"
