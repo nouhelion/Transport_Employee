@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/reclamations"
         android:layout_width="190dp"
-        android:layout_height="18dp"
+        android:layout_height="28dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
@@ -44,8 +44,8 @@
     <Button
         android:id="@+id/bar"
         android:layout_width="190dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="30dp"
         android:background="@drawable/line"
         app:layout_constraintStart_toStartOf="parent"

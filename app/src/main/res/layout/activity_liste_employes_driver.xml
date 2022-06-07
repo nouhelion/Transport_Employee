@@ -72,9 +72,9 @@
         android:background="@drawable/jixo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stations_spinner"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -82,9 +82,9 @@
         android:background="@drawable/jixo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stations_spinner"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -93,8 +93,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp2"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -104,8 +104,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp2"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -115,8 +115,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp3"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -126,8 +126,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp4"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -137,8 +137,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp5"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -148,8 +148,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp6"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
     <Button
@@ -158,8 +158,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp7"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
@@ -169,31 +169,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emp8"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
-        android:layout_height="35dp"/>
-
-
-    <Button
-        android:id="@+id/emp11"
-        android:background="@drawable/jixo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emp9"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="160dp"
         android:layout_height="35dp"/>
 
 
 
-    <Button
-        android:id="@+id/emp12"
-        android:background="@drawable/jixo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emp10"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:layout_width="140dp"
-        android:layout_height="35dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

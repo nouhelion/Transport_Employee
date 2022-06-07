@@ -37,8 +37,8 @@
     <Button
         android:id="@+id/bar"
         android:layout_width="150dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="30dp"
         android:background="@drawable/line"
         app:layout_constraintStart_toStartOf="parent"
