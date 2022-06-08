@@ -41,4 +41,8 @@
     <string name="sara">Sara</string>
     <string name="conducteur">Conducteur</string>
     <string name="employ_">Employé</string>
+    <string-array name="context_view">
+        <item>ScrollView</item>
+        <item>WebView</item>
+    </string-array>
 </resources>

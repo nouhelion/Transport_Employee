@@ -64,8 +64,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp"
+        android:entries="@array/context_view"
         android:layout_width="180dp"
-        android:layout_height="35dp" />
+        android:layout_height="45dp" />
 
     <Button
         android:id="@+id/emp1"
