@@ -45,4 +45,5 @@
         <item>ScrollView</item>
         <item>WebView</item>
     </string-array>
+    <string name="reclainput">Tappez votre réclamation...</string>
 </resources>
