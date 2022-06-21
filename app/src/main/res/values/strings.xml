@@ -46,4 +46,5 @@
         <item>WebView</item>
     </string-array>
     <string name="reclainput">Tappez votre réclamation...</string>
+    <string name="evalinput">Tappez votre évaluation...</string>
 </resources>
