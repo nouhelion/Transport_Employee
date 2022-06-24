@@ -2,12 +2,12 @@ package com.example.templo;
 
 public class Station {
     String nom;
-    Boolean status;
+    String status;
 
     public Station() {
     }
 
-    public Station(String nom, Boolean status) {
+    public Station(String nom, String status) {
         this.nom = nom;
         this.status = status;
     }
@@ -20,11 +20,11 @@ public class Station {
         this.nom = nom;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

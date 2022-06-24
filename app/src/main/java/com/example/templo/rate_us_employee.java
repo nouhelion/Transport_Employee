@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class rate_us_employee extends AppCompatActivity {
 
-    RatingBar rating;
+
 
     ImageView menu,add;
 
@@ -61,7 +61,7 @@ public class rate_us_employee extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        rating=(RatingBar) findViewById(R.id.RatingBar);
+        final RatingBar rating=(RatingBar) findViewById(R.id.RatingBar);
         LayerDrawable stars = (LayerDrawable) rating.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(ContextCompat.getColor(this, R.color.green), PorterDuff.Mode.SRC_ATOP);
 
