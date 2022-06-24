@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +23,7 @@ import java.util.List;
 
 public class liste_employes_driver extends AppCompatActivity {
     ImageView menu;
+    TextView stations;
     Spinner stations_spinner;
     CollectionReference StationsRef;
     FirebaseFirestore db;
@@ -40,6 +42,16 @@ public class liste_employes_driver extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        stations=(TextView) findViewById(R.id.liste_des_s);
+        stations.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(liste_employes_driver.this,liste_stations_driver.class);
+                startActivity(intent);
+            }
+        });
+
+
         db= FirebaseFirestore.getInstance();
         StationsRef = db.collection("Station");
         stations_spinner= (Spinner) findViewById(R.id.stations_spinner);
