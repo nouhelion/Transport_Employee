@@ -10,6 +10,7 @@ public class Employe implements Serializable {
     private String datenaissance;
     private String telephone;
     private String station;
+    private Boolean status;
 
     public String getStation() {
         return station;
@@ -22,13 +23,23 @@ public class Employe implements Serializable {
     public Employe() {
     }
 
-    public Employe(String nom, String prenom, String cin, String adresse, String datenaissance, String telephone) {
+    public Employe(String nom, String prenom, String cin, String adresse, String datenaissance, String telephone, String station, Boolean status) {
         this.nom = nom;
         this.prenom = prenom;
         this.cin = cin;
         this.adresse = adresse;
         this.datenaissance = datenaissance;
         this.telephone = telephone;
+        this.station = station;
+        this.status = status;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
     public  String getNom() {

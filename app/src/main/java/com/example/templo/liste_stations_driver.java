@@ -26,11 +26,9 @@ import java.util.List;
 public class liste_stations_driver extends AppCompatActivity {
     ImageView menu;
     TextView employees;
-    TextView stat;
 
-    RelativeLayout container;
-    String id;
-    String status;
+
+
 
     // creating a variable for our
     // grid view, arraylist and
@@ -66,8 +64,6 @@ public class liste_stations_driver extends AppCompatActivity {
 
         // below line is use to initialize our variables.
         Stations = findViewById(R.id.idStations);
-        // on create
-        container = (RelativeLayout) findViewById(R.id.item);
         StationArrayList = new ArrayList<>();
         // initializing our variable for firebase
         // firestore and getting its instance.

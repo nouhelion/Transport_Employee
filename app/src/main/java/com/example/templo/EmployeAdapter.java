@@ -1,12 +1,11 @@
 package com.example.templo;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,18 +13,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class StationAdapter extends ArrayAdapter <Station>{
+public class EmployeAdapter extends ArrayAdapter<Employe> {
 
     String id;
     // creating a variable for firebasefirestore.
@@ -33,10 +30,11 @@ public class StationAdapter extends ArrayAdapter <Station>{
     FirebaseFirestore db= FirebaseFirestore.getInstance();
     Task<QuerySnapshot> reference;
     // constructor for our list view adapter.
-    public StationAdapter(@NonNull Context context, ArrayList<Station> StationArrayList) {
-        super(context, 0, StationArrayList);
+    public EmployeAdapter(@NonNull Context context, ArrayList<Employe> EmployeArrayList) {
+        super(context, 0, EmployeArrayList);
     }
 
+    @SuppressLint("ResourceAsColor")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -51,21 +49,21 @@ public class StationAdapter extends ArrayAdapter <Station>{
         // after inflating an item of listview item
         // we are getting data from array list inside
         // our modal class.
-        Station station = getItem(position);
+        Employe employe = getItem(position);
 
         // initializing our UI components of list view item.
-        TextView stationName = listitemView.findViewById(R.id.grid_item);
+        TextView employeName = listitemView.findViewById(R.id.grid_item);
         //TextView status = listitemView.findViewById(R.id.status);
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
 
-        stationName.setText(station.getNom());
+        employeName.setText(new StringBuilder().append(employe.getNom()).append(" ").append(employe.getPrenom()).toString());
         RelativeLayout item = listitemView.findViewById(R.id.item);
-        if(station.getStatus())
+        if(employe.getStatus())
         {
             item.setBackgroundResource(R.drawable.nixo);
-            stationName.setTextColor(R.color.white);
+            employeName.setTextColor(R.color.white);
         }
 
 
@@ -76,33 +74,33 @@ public class StationAdapter extends ArrayAdapter <Station>{
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                if(station.getStatus())
+                if(employe.getStatus())
                 {
                     item.setBackgroundResource(R.drawable.jixo);
-                    stationName.setTextColor(R.color.item);
-                    station.setStatus(Boolean.FALSE);
+                    employeName.setTextColor(R.color.item);
+                    employe.setStatus(Boolean.FALSE);
                 }
                 else{
                     item.setBackgroundResource(R.drawable.nixo);
-                    stationName.setTextColor(R.color.white);
-                    station.setStatus(Boolean.TRUE);
+                    employeName.setTextColor(R.color.white);
+                    employe.setStatus(Boolean.TRUE);
                 }
 
 
-               // status.setText("True");
-                Toast.makeText(getContext(), "Item clicked is : " + station.getNom()+" "+station.getStatus(), Toast.LENGTH_SHORT).show();
-                db.collection("Station")
-                        .whereEqualTo("nom",station.getNom())
+                // status.setText("True");
+                Toast.makeText(getContext(), "Item clicked is : " + employe.getNom()+" "+employe.getStatus(), Toast.LENGTH_SHORT).show();
+                db.collection("Employe")
+                        .whereEqualTo("nom",employe.getNom())
                         .get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 if (task.isSuccessful()) {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
-                                       id = document.getId();
-                                        db.collection("Station")
+                                        id = document.getId();
+                                        db.collection("Employe")
                                                 .document(id)
-                                                .update("status",station.getStatus());
+                                                .update("status",employe.getStatus());
                                     }
                                 }
                             }
@@ -114,5 +112,4 @@ public class StationAdapter extends ArrayAdapter <Station>{
         });
         return listitemView;
     }
-
 }
