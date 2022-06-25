@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,9 +26,11 @@ import java.util.List;
 public class liste_stations_driver extends AppCompatActivity {
     ImageView menu;
     TextView employees;
+    TextView stat;
 
-
-
+    RelativeLayout container;
+    String id;
+    String status;
 
     // creating a variable for our
     // grid view, arraylist and
@@ -63,12 +66,14 @@ public class liste_stations_driver extends AppCompatActivity {
 
         // below line is use to initialize our variables.
         Stations = findViewById(R.id.idStations);
-
+        // on create
+        container = (RelativeLayout) findViewById(R.id.item);
         StationArrayList = new ArrayList<>();
         // initializing our variable for firebase
         // firestore and getting its instance.
         db = FirebaseFirestore.getInstance();
 
+        //stat=(TextView)findViewById(R.id.status) ;
 
         // here we are calling a method 
         // to load data in our list view.
@@ -94,11 +99,9 @@ public class liste_stations_driver extends AppCompatActivity {
                             // progress bar and adding our data in a list.
                             List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
                             for (DocumentSnapshot d : list) {
-
                                 // after getting this list we are passing
                                 // that list to our object class.
                                 Station dataModal = d.toObject(Station.class);
-
                                 // after getting data from Firebase
                                 // we are storing that data in our array list
                                StationArrayList.add(dataModal);
@@ -125,6 +128,8 @@ public class liste_stations_driver extends AppCompatActivity {
                 });
 
     }
+
+
 
 
 }
