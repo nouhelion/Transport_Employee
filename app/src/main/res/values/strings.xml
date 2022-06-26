@@ -47,4 +47,17 @@
     </string-array>
     <string name="reclainput">Tappez votre réclamation...</string>
     <string name="evalinput">Tappez votre évaluation...</string>
+    <string name="pickup">PICKUP @</string>
+    <string name="dd">2022/05/05</string>
+    <string name="depart">Départ :</string>
+    <string name="arrivee">Arrivée :</string>
+    <string name="bouskoura">depart</string>
+    <string name="technopark">Technopark</string>
+    <string name="infs_trajet">Informations sur le trajet :</string>
+    <string name="infs_trans">Informations sur le transport :</string>
+    <string name="Station_Actuelle">Station Actuelle :</string>
+    <string name="Nom_conducteur">Nom du conducteur :</string>
+    <string name="N_vehicule">Nº véhicule :</string>
+    <string name="Couleur_vehicule">Couleur véhicule :</string>
+    <string name="Type_vehicule">Marque véhicule :</string>
 </resources>

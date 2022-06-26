@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -29,7 +30,7 @@ public class StationAdapter extends ArrayAdapter <Station>{
 
     String id;
     // creating a variable for firebasefirestore.
-    private FirebaseUser user;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseFirestore db= FirebaseFirestore.getInstance();
     Task<QuerySnapshot> reference;
     // constructor for our list view adapter.
@@ -103,6 +104,9 @@ public class StationAdapter extends ArrayAdapter <Station>{
                                         db.collection("Station")
                                                 .document(id)
                                                 .update("status",station.getStatus());
+                                        db.collection("conducteur")
+                                                .document(user.getUid())
+                                                .update("stationActuelle",station.getNom());
                                     }
                                 }
                             }
