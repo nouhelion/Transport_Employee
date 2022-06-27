@@ -26,6 +26,7 @@ import java.util.Date;
 public class trajet_det_employee extends AppCompatActivity {
     ImageView menu;
     TextView depart,date,actuelle,nomCond,numVehicule,couleur,marque,retard,cause;
+    String currentDateandTime;
     // creating a variable for firebasefirestore.
     private FirebaseUser user;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
@@ -44,7 +45,7 @@ public class trajet_det_employee extends AppCompatActivity {
         });
 
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
-        String currentDateandTime = sdf.format(new Date());
+        currentDateandTime = sdf.format(new Date());
         depart=(TextView) findViewById(R.id.stationDepart);
         actuelle=(TextView) findViewById(R.id.actuelle);
         nomCond=(TextView) findViewById(R.id.NOMconducteur);
@@ -115,26 +116,7 @@ public class trajet_det_employee extends AppCompatActivity {
                                 couleur.setText(cleur);
                                 marque.setText(type);
 
-                                db.collection("Retard")
-                                        .whereEqualTo("immatriculation",immatriculation)
-                                        .get()
-                                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                                if (task.isSuccessful()) {
-                                                    for (QueryDocumentSnapshot document : task.getResult()) {
-                                                        String casse;
-                                                        casse=document.getString("cause");
 
-                                                       cause.setText(casse);
-
-
-
-
-                                                    }
-                                                }
-                                            }
-                                        });
 
 
                             }
@@ -149,10 +131,12 @@ public class trajet_det_employee extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if(task.getResult().exists()){
-                            String cause;
+                            String cause,dd;
                            cause=task.getResult().getString("cause");
+                           dd=task.getResult().getString("date");
+                           if(dd==currentDateandTime)
+                              retard.setText(cause);
 
-                           retard.setText(cause);
 
                         }
 
