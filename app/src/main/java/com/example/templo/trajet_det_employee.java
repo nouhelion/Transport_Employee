@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class trajet_det_employee extends AppCompatActivity {
     ImageView menu;
-    TextView depart,date,actuelle,nomCond,numVehicule,couleur,marque,retard;
+    TextView depart,date,actuelle,nomCond,numVehicule,couleur,marque,retard,cause;
     // creating a variable for firebasefirestore.
     private FirebaseUser user;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
@@ -53,6 +53,7 @@ public class trajet_det_employee extends AppCompatActivity {
         marque=(TextView) findViewById(R.id.marque);
         date=(TextView) findViewById(R.id.date);
         retard=(TextView) findViewById(R.id.ret);
+        cause=(TextView)findViewById(R.id.cause);
         date.setText(currentDateandTime);
 
     }
@@ -96,6 +97,8 @@ public class trajet_det_employee extends AppCompatActivity {
                     }
                 });
 
+
+
         db.collection("Vehicule")
                 .whereEqualTo("idConducteur","JvvA1NBzRHZ8kimjF7bxvKE0w322")
                 .get()
@@ -111,6 +114,27 @@ public class trajet_det_employee extends AppCompatActivity {
                                 numVehicule.setText(immatriculation);
                                 couleur.setText(cleur);
                                 marque.setText(type);
+
+                                db.collection("Retard")
+                                        .whereEqualTo("immatriculation",immatriculation)
+                                        .get()
+                                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                                if (task.isSuccessful()) {
+                                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                                        String casse;
+                                                        casse=document.getString("cause");
+
+                                                       cause.setText(casse);
+
+
+
+
+                                                    }
+                                                }
+                                            }
+                                        });
 
 
                             }

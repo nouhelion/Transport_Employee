@@ -63,4 +63,5 @@
     <string name="N_vehicule">Nº véhicule :</string>
     <string name="Couleur_vehicule">Couleur véhicule :</string>
     <string name="Type_vehicule">Marque véhicule :</string>
+    <string name="cause">Cause :</string>
 </resources>
