@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class trajet_det_employee extends AppCompatActivity {
     ImageView menu;
-    TextView depart,date,actuelle,nomCond,numVehicule,couleur,marque;
+    TextView depart,date,actuelle,nomCond,numVehicule,couleur,marque,retard;
     // creating a variable for firebasefirestore.
     private FirebaseUser user;
     FirebaseFirestore db= FirebaseFirestore.getInstance();
@@ -52,6 +52,7 @@ public class trajet_det_employee extends AppCompatActivity {
         couleur=(TextView) findViewById(R.id.couleur);
         marque=(TextView) findViewById(R.id.marque);
         date=(TextView) findViewById(R.id.date);
+        retard=(TextView) findViewById(R.id.ret);
         date.setText(currentDateandTime);
 
     }
@@ -114,6 +115,23 @@ public class trajet_det_employee extends AppCompatActivity {
 
                             }
                         }
+                    }
+                });
+
+        db.collection("Retard")
+                .document("JvvA1NBzRHZ8kimjF7bxvKE0w322")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if(task.getResult().exists()){
+                            String cause;
+                           cause=task.getResult().getString("cause");
+
+                           retard.setText(cause);
+
+                        }
+
                     }
                 });
     }

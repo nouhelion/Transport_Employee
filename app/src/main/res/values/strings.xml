@@ -46,12 +46,15 @@
         <item>WebView</item>
     </string-array>
     <string name="reclainput">Tappez votre réclamation...</string>
+    <string name="retardinput">Tappez votre cause de retard...</string>
     <string name="evalinput">Tappez votre évaluation...</string>
     <string name="pickup">PICKUP @</string>
     <string name="dd">2022/05/05</string>
+    <string name="dd1">2022/05/04</string>
+    <string name="dd2">2022/05/03</string>
     <string name="depart">Départ :</string>
     <string name="arrivee">Arrivée :</string>
-    <string name="bouskoura">depart</string>
+    <string name="bouskoura">Bouskoura</string>
     <string name="technopark">Technopark</string>
     <string name="infs_trajet">Informations sur le trajet :</string>
     <string name="infs_trans">Informations sur le transport :</string>

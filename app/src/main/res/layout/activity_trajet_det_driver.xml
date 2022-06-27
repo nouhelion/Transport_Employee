@@ -52,7 +52,76 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="50dp"
         android:layout_width="320dp"
-        android:layout_height="220dp">
+        android:layout_height="126dp">
+        <TextView
+            android:id="@+id/Ppickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/pickup"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/dd"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Ppickup"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/Station_Actuelle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/depart"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ppickup" />
+
+        <TextView
+            android:id="@+id/stationAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/poppins"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Station_Actuelle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ppickup" />
+
+        <TextView
+            android:id="@+id/arrivee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/arrivee"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Station_Actuelle" />
+
+        <TextView
+            android:id="@+id/stationArrivee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/technopark"
+            android:textAppearance="@style/historique_"
+            app:layout_constraintBaseline_toBaselineOf="@+id/arrivee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stationAC" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -68,17 +137,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickup" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/retard"
-        android:background="@drawable/backgr"
-        app:layout_constraintTop_toBottomOf="@+id/pickup"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/rettard"
+        android:layout_width="278dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input"
+        android:gravity="center"
+        android:hint="@string/retardinput"
+        android:importantForAutofill="no"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"
-        android:layout_width="320dp"
-        android:layout_height="100dp">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/ajouter_un"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/arrow"
@@ -89,7 +161,7 @@
         android:contentDescription="@string/station_de_"
         android:src="@drawable/arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retard"
+        app:layout_constraintTop_toBottomOf="@+id/rettard"
         tools:ignore="ImageContrastCheck" />
 
 
