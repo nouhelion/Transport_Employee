@@ -87,12 +87,12 @@ public class trajet_det_employee extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if(task.getResult().exists()){
-                            String Nom,Prenom;
+                            String Nom,Prenom,actu;
                             Nom=task.getResult().getString("nom");
                             Prenom=task.getResult().getString("prenom");
-
+                            actu=task.getResult().getString("stationActuelle");
                             nomCond.setText(new StringBuilder().append(Nom).append(" ").append(Prenom).toString());
-
+                            actuelle.setText(actu);
                         }
 
                     }
@@ -131,11 +131,12 @@ public class trajet_det_employee extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if(task.getResult().exists()){
-                            String cause,dd;
+                            String cause,dd,station;
                            cause=task.getResult().getString("cause");
                            dd=task.getResult().getString("date");
-                           if(dd==currentDateandTime)
-                              retard.setText(cause);
+                           station=task.getResult().getString("stationActuelle");
+                               retard.setText("la cause du Retard : "+cause);
+
 
 
                         }
