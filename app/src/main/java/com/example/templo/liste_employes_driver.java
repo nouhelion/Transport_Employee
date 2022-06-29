@@ -76,6 +76,7 @@ public class liste_employes_driver extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.color_spinner_layout, Stations);
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         stations_spinner.setAdapter(adapter);
+        Stations.add("station");
         StationsRef
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -106,6 +107,7 @@ public class liste_employes_driver extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                  text=Stations.get(i);
                 Toast.makeText(liste_employes_driver.this, "station : "+ text, Toast.LENGTH_SHORT).show();
+                EmployeArrayList.clear();
                  loadDatainGridView(text);
             }
 
