@@ -142,7 +142,7 @@
         android:layout_width="220dp"
         android:layout_height="18dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="54dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/modificatio"
         android:textAppearance="@style/modificatio"
@@ -161,26 +161,55 @@
         app:layout_constraintTop_toBottomOf="@+id/chang"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+       android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar2"
+        android:id="@+id/group">
+
+        <RadioButton
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:minHeight="48dp"
+            android:text="@string/today"
+            android:textAppearance="@style/historique_" />
+
+        <RadioButton
+            android:id="@+id/tomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:minHeight="48dp"
+            android:text="@string/tomorrow"
+            android:textAppearance="@style/historique_" />
+    </RadioGroup>
+
+
     <EditText
         android:id="@+id/dep"
         android:layout_width="218dp"
         android:layout_height="34dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/input"
         android:gravity="center"
         android:hint="@string/station_de_"
         android:importantForAutofill="no"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bar2"
+        app:layout_constraintTop_toBottomOf="@+id/group"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/arrow"
         android:layout_width="36dp"
         android:layout_height="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:contentDescription="@string/station_de_"
         android:src="@drawable/arrow"
